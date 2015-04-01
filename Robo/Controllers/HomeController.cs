@@ -32,12 +32,13 @@ namespace Robo.Controllers
         {
             var Credenciais = new NameValueCollection();
 
-            Credenciais.Add("usuario", "claudio");
-            Credenciais.Add("senha", "ac@78902");
+            Credenciais.Add("usuario", "6191CRISTO");
+            Credenciais.Add("senha", "1530guiton");
 
             return WR.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
         }
 
+        }
 
     }
 }
