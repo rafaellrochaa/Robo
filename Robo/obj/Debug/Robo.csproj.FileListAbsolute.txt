@@ -48,3 +48,25 @@ C:\Users\suporte2\Documents\Visual Studio 2013\Projects\Robo\Robo\bin\System.Web
 C:\Users\suporte2\Documents\Visual Studio 2013\Projects\Robo\Robo\obj\Debug\Robo.csprojResolveAssemblyReference.cache
 C:\Users\suporte2\Documents\Visual Studio 2013\Projects\Robo\Robo\obj\Debug\Robo.dll
 C:\Users\suporte2\Documents\Visual Studio 2013\Projects\Robo\Robo\obj\Debug\Robo.pdb
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Robo.dll.config
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Robo.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Robo.pdb
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Newtonsoft.Json.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Helpers.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Mvc.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Razor.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.Razor.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\Newtonsoft.Json.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Helpers.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Mvc.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.Razor.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\bin\System.Web.WebPages.Razor.xml
+C:\Users\Henrique\Source\Repos\Robo\Robo\obj\Debug\Robo.csprojResolveAssemblyReference.cache
+C:\Users\Henrique\Source\Repos\Robo\Robo\obj\Debug\Robo.dll
+C:\Users\Henrique\Source\Repos\Robo\Robo\obj\Debug\Robo.pdb

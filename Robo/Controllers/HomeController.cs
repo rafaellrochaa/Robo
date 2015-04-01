@@ -15,13 +15,6 @@ namespace Robo.Controllers
 
         public string Index()
         {
-            string html = WR.DoRequest("http://www.dolarhoje.com.br/");
-            string expressao = "stockup stockup_bigger";
-
-            int posDolar = html.IndexOf(expressao);
-
-            return html.Substring(posDolar + expressao.Length + 2, 5);
-
 
         }
 
@@ -29,10 +22,10 @@ namespace Robo.Controllers
         {
             var Credenciais = new NameValueCollection();
 
-            Credenciais.Add("usuario", "claudio");
-            Credenciais.Add("senha", "ac@78902");
+            Credenciais.Add("usuario", "6191CRISTO");
+            Credenciais.Add("senha", "1530guiton");
 
-            return WR.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
+            return WR.DoPost("https://consignado.bemvindobanrisul.com.br/Login.aspx?ReturnUrl=%2fDefault.aspx", "https://consignado.bemvindobanrisul.com.br/Default.aspx", Credenciais);
 
 
         }
