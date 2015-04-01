@@ -15,14 +15,17 @@ namespace Robo.Controllers
 
         public string Index()
         {
-            string html = WR.DoRequest("http://www.dolarhoje.com.br/");
-            string expressao = "stockup stockup_bigger";
+            string loginAddress = "www.agilus.com.br/Alvo";
+            var loginData = new NameValueCollection
+            {
+                { "usuario", "claudio" },
+                { "senha", "ac@78902" }
+            };
 
-            int posDolar = html.IndexOf(expressao);
+            var client = new processadorDeRequisicoes();
 
-            return html.Substring(posDolar + expressao.Length + 2, 5);
-
-
+            client.Login(loginAddress, loginData);
+            return client.DownloadString(loginAddress);
         }
 
         public string Login()
@@ -33,9 +36,8 @@ namespace Robo.Controllers
             Credenciais.Add("senha", "ac@78902");
 
             return WR.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
-
-
         }
+
 
     }
 }
