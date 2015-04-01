@@ -15,29 +15,15 @@ namespace Robo.Controllers
 
         public string Index()
         {
-            string loginAddress = "www.agilus.com.br/Alvo";
-            var loginData = new NameValueCollection
-            {
-                { "usuario", "claudio" },
-                { "senha", "ac@78902" }
-            };
 
-            var client = new processadorDeRequisicoes();
-
-            client.Login(loginAddress, loginData);
-            return client.DownloadString(loginAddress);
-        }
-
-        public string Login()
-        {
             var Credenciais = new NameValueCollection();
 
-            Credenciais.Add("usuario", "6191CRISTO");
-            Credenciais.Add("senha", "1530guiton");
+            Credenciais.Add("cphBodyMain_cphBody_txtLogin", "gestor@guiton");
+            Credenciais.Add("cphBodyMain_cphBody_txtSenha", "criston96*");
 
-            return WR.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
-        }
+            string html = WR.DoRequest("http://www.bradescopromotoranet.com.br/Login.aspx", Credenciais);
 
+            return html;
         }
 
     }

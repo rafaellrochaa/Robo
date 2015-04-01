@@ -11,32 +11,40 @@ namespace Robo.Models
 {
     static public class WR
     {
-        static public string DoPost(string urlGetAutenticacao, string UrlPost, NameValueCollection parametros)
+        static public string DoRequest(string url, NameValueCollection parametros)
         {
-            using (var client = new CookieAwareWebClient())
+            //cria uma requisição para a url
+            HttpWebRequest rq = (HttpWebRequest)WebRequest.Create(url);
+            rq.CookieContainer = new CookieContainer(); // Adiciona cookie de autenticação a requisição
+            rq.Method = "POST";
+
+            var postData = new StringBuilder();
+            foreach (string key in parametros.Keys)
             {
-                var response = client.UploadValues(urlGetAutenticacao, parametros);
-                var result = client.DownloadData(UrlPost);
-                return Encoding.UTF8.GetString(result);
+                postData.AppendFormat("{0}={1}&",
+                HttpUtility.UrlEncode(key),
+                HttpUtility.UrlEncode(parametros[key]));
             }
+            postData.Length -= 1;
+
+            //bufferizando os dados do post
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData.ToString());
+            rq.ContentType = "application/x-www-form-urlencoded";
+            //informando para cabeçalho tamanho dos dados do post
+            rq.ContentLength = byteArray.Length;
+
+            //Gravando dados bufferizados na requisição
+            Stream sr = rq.GetRequestStream();
+            sr.Write(byteArray, 0, byteArray.Length);
+            sr.Close();
+
+            //Obtendo a resposta do server
+            WebResponse response = rq.GetResponse();
+
+            //Pegando a stream de resposta para leitura
+            StreamReader s = new StreamReader(response.GetResponseStream());
+            return s.ReadToEnd();
+
         }
-
-        public class CookieAwareWebClient : WebClient
-        {
-            public CookieAwareWebClient()
-            {
-                CookieContainer = new CookieContainer();
-            }
-            public CookieContainer CookieContainer { get; private set; }
-
-            protected override WebRequest GetWebRequest(Uri address)
-            {
-                var request = (HttpWebRequest)base.GetWebRequest(address);
-                
-                request.CookieContainer = CookieContainer;
-                return request;
-            }
-        }
-
     }
 }
