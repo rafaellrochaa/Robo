@@ -17,7 +17,7 @@ namespace Robo.Controllers
 
         public string Index()
         {
-            string html = WR.DoRequest("http://www.dolarhoje.com.br/");
+            string html = WR2.DoRequest("http://www.dolarhoje.com.br/");
             string expressao = "stockup stockup_bigger";
 
             int posDolar = html.IndexOf(expressao);
@@ -34,7 +34,7 @@ namespace Robo.Controllers
             Credenciais.Add("usuario", "claudio");
             Credenciais.Add("senha", "ac@78902");
 
-            return WR.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
+            return WR2.DoPost("http://www.agilus.com.br/alvo", "http://www.agilus.com.br/alvo/Consultas", Credenciais);
 
 
         }
