@@ -10,7 +10,7 @@ using System.Web;
 
 namespace Robo.Models
 {
-    static public class WR
+    static public class WR2
     {
         static public string DoRequest(string url, NameValueCollection parametros)
         {
